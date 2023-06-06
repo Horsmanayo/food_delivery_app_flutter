@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/utils/colors.dart';
 import 'package:food_delivery_app/widgets/big_text.dart';
+import 'package:food_delivery_app/widgets/small_text.dart';
 
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({Key? key}) : super(key: key);
@@ -24,7 +25,18 @@ class _MainFoodPageState extends State<MainFoodPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
-                      children: [BigText(text: "Nigeria"), Text("city")],
+                      children: [
+                        BigText(text: "Nigeria"),
+                        Row(
+                          children: [
+                            SmallText(
+                              text: "Lagos",
+                              color: Colors.black54,
+                            )
+                            Icon(Icons.arrow_drop_down_rounded)
+                          ],
+                        )
+                      ],
                     ),
                     Center(
                       child: Container(
