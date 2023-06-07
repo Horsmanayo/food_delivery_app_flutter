@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/home/food_page.dart';
 import 'package:food_delivery_app/utils/colors.dart';
 import 'package:food_delivery_app/widgets/big_text.dart';
 import 'package:food_delivery_app/widgets/small_text.dart';
@@ -32,7 +33,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                             SmallText(
                               text: "Lagos",
                               color: Colors.black54,
-                            )
+                            ),
                             Icon(Icons.arrow_drop_down_rounded)
                           ],
                         )
@@ -53,7 +54,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
                       ),
                     )
                   ],
-                )))
+                ))),
+        FoodPage(),
       ],
     ));
   }
