@@ -14,6 +14,7 @@ class FoodPage extends StatefulWidget {
 class _FoodPageState extends State<FoodPage> {
   PageController pageController = PageController(viewportFraction: 0.9);
   var _currPageValue = 0.0;
+  double _scaleFactor = 0.8;
 
   @override
   void initState() {
