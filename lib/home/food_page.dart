@@ -49,6 +49,17 @@ class _FoodPageState extends State<FoodPage> {
   }
 
   Widget _buildPageItem(int index) {
+    // returns an instance with a three coordinate of x, y and z
+    Matrix4 matrix = Matrix4.identity();
+    print(matrix);
+
+    // checking if index value matches with the current page value
+    if (index == _currPageValue.floor()) {
+      var currScale = 1 - (_currPageValue - index) * (1 - _scaleFactor);
+    } else if (index == _currPageValue.floor() + 1) {
+      var currScale =
+          _scaleFactor + (_currPageValue - index + 1) * (1 - _scaleFactor);
+    }
     return Stack(
       children: [
         Container(
