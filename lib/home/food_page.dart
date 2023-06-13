@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/utils/colors.dart';
+import 'package:food_delivery_app/utils/dimensions.dart';
 import 'package:food_delivery_app/widgets/big_text.dart';
 import 'package:food_delivery_app/widgets/icon_and_text_widget.dart';
 import 'package:food_delivery_app/widgets/small_text.dart';
@@ -16,7 +17,7 @@ class _FoodPageState extends State<FoodPage> {
   PageController pageController = PageController(viewportFraction: 0.9);
   var _currPageValue = 0.0;
   double _scaleFactor = 0.8;
-  double _height = 220;
+  double _height = Dimensions.pageViewContainer;
 
   @override
   void initState() {
@@ -42,7 +43,7 @@ class _FoodPageState extends State<FoodPage> {
       children: [
         Container(
           // color: Colors.redAccent,
-          height: 320,
+          height: Dimensions.pageView,
           child: PageView.builder(
               controller: pageController,
               itemCount: 5,
@@ -97,7 +98,7 @@ class _FoodPageState extends State<FoodPage> {
       child: Stack(
         children: [
           Container(
-            height: 220,
+            height: Dimensions.pageViewContainer,
             margin: EdgeInsets.only(left: 5, right: 10),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
@@ -110,8 +111,9 @@ class _FoodPageState extends State<FoodPage> {
               //Align permits a container to be moved to any part of the website
               alignment: Alignment.bottomCenter,
               child: Container(
-                height: 140,
-                margin: EdgeInsets.only(left: 30, right: 30, bottom: 30),
+                height: Dimensions.pageViewTextContainer,
+                margin: EdgeInsets.only(
+                    left: 30, right: 30, bottom: Dimensions.height30),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     color: Colors.white,
@@ -136,7 +138,8 @@ class _FoodPageState extends State<FoodPage> {
                       )
                     ]),
                 child: Container(
-                  padding: EdgeInsets.only(top: 15, left: 15, right: 15),
+                  padding: EdgeInsets.only(
+                      top: Dimensions.height15, left: 15, right: 15),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -145,7 +148,7 @@ class _FoodPageState extends State<FoodPage> {
                           color: Colors.black,
                         ),
                         SizedBox(
-                          height: 10,
+                          height: Dimensions.height10,
                         ),
                         Row(
                           children: [
@@ -183,9 +186,10 @@ class _FoodPageState extends State<FoodPage> {
                           ],
                         ),
                         SizedBox(
-                          height: 20,
+                          height: Dimensions.height10,
                         ),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             IconAndTextWidget(
                                 iconColor: AppColors.yellowColor,
