@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:food_delivery_app/utils/colors.dart';
 
 class SmallText extends StatelessWidget {
   Color? color;
@@ -10,7 +11,7 @@ class SmallText extends StatelessWidget {
 
   SmallText({
     Key? key,
-    this.color = const Color(0xFF332d2b),
+    this.color = AppColors.textColor,
     this.height = 1.2,
     required this.text,
     this.size = 12,
