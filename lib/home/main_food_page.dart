@@ -17,7 +17,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
     //this is to print screen size
-    // print(MediaQuery.of(context).size.width.toString());
+    print(MediaQuery.of(context).size.height.toString());
     return Scaffold(
         body: Column(
       children: [
@@ -62,7 +62,10 @@ class _MainFoodPageState extends State<MainFoodPage> {
                     )
                   ],
                 ))),
-        FoodPage(),
+        Expanded(
+            child: SingleChildScrollView(
+          child: FoodPage(),
+        )),
       ],
     ));
   }

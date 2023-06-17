@@ -8,6 +8,7 @@ class Dimensions {
   static double pageViewContainer = screenHeight / 3.84;
   static double pageViewTextContainer = screenHeight / 6.80;
 
+  static double width150 = screenWidth / 3.33;
   static double width45 = screenWidth / 11.11;
   static double width30 = screenWidth / 16.67;
   static double width20 = screenWidth / 25;
@@ -19,6 +20,8 @@ class Dimensions {
   static double height20 = screenHeight / 42.2;
   static double height30 = screenHeight / 28.13;
   static double height45 = screenHeight / 18.76;
+  static double height100 = screenHeight / 6.2;
+  static double height150 = screenHeight / 4.13;
 
   static double font10 = screenHeight / 84.4;
   static double font20 = screenHeight / 42.2;
