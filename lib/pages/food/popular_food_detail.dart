@@ -25,6 +25,8 @@ class PopularFoodDetails extends StatelessWidget {
                         fit: BoxFit.cover,
                         image: AssetImage("assets/images/food01.jpg"))),
               )),
+          Positioned(
+              left: Dimensions.width20, right: Dimensions.width20, child: Row())
         ],
       ),
     );
